@@ -34,8 +34,13 @@ namespace ControleDeCadastros.Controllers
         [HttpPost]
         public IActionResult AlterarContato(ContatosModel contato)
         {
-            _contatoRepositorio.AtualizarContato(contato);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _contatoRepositorio.AtualizarContato(contato);
+                return RedirectToAction("Index");
+            }
+
+            return View("Editar", contato);
         }
 
         public IActionResult RemoverConfirmar(int ID)
@@ -46,10 +51,14 @@ namespace ControleDeCadastros.Controllers
 
         //Criar/apagar contato
         [HttpPost]
-        public IActionResult CriarContato(ContatosModel NovoContato)
+        public IActionResult Criar(ContatosModel NovoContato)
         {
-            _contatoRepositorio.Adicionar(NovoContato);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _contatoRepositorio.Adicionar(NovoContato);
+                return RedirectToAction("Index");
+            }
+            return View(NovoContato);
         }
 
         // [HttpDelete]

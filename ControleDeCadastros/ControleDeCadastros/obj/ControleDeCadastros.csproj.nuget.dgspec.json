@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\EstudoC#\\ControleDeCadastros\\ControleDeCadastros\\ControleDeCadastros.csproj": {}
+    "C:\\Users\\User\\Desktop\\EstudoC#\\CRUD-ASP.NET\\ControleDeCadastros\\ControleDeCadastros\\ControleDeCadastros.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\EstudoC#\\ControleDeCadastros\\ControleDeCadastros\\ControleDeCadastros.csproj": {
+    "C:\\Users\\User\\Desktop\\EstudoC#\\CRUD-ASP.NET\\ControleDeCadastros\\ControleDeCadastros\\ControleDeCadastros.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\EstudoC#\\ControleDeCadastros\\ControleDeCadastros\\ControleDeCadastros.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\EstudoC#\\CRUD-ASP.NET\\ControleDeCadastros\\ControleDeCadastros\\ControleDeCadastros.csproj",
         "projectName": "ControleDeCadastros",
-        "projectPath": "C:\\Users\\User\\Desktop\\EstudoC#\\ControleDeCadastros\\ControleDeCadastros\\ControleDeCadastros.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\EstudoC#\\CRUD-ASP.NET\\ControleDeCadastros\\ControleDeCadastros\\ControleDeCadastros.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\EstudoC#\\ControleDeCadastros\\ControleDeCadastros\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\EstudoC#\\CRUD-ASP.NET\\ControleDeCadastros\\ControleDeCadastros\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

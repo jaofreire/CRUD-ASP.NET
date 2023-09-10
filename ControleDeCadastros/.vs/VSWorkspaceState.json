@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ControleDeCadastros",
+    "\\ControleDeCadastros\\Controllers",
+    "\\ControleDeCadastros\\Data",
+    "\\ControleDeCadastros\\Models",
+    "\\ControleDeCadastros\\Repositorio"
+  ],
+  "SelectedNode": "\\ControleDeCadastros\\Repositorio\\ContatoRepositorio.cs",
+  "PreviewInSolutionExplorer": false
+}
