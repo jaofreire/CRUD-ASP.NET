@@ -24,3 +24,9 @@ body {
 .field-validation-error {
     color: #dc3545;
 }
+
+.btn-close{
+    position: absolute;
+    right: +10px;
+    top: +15px;
+}

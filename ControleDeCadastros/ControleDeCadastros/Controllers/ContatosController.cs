@@ -34,13 +34,22 @@ namespace ControleDeCadastros.Controllers
         [HttpPost]
         public IActionResult AlterarContato(ContatosModel contato)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _contatoRepositorio.AtualizarContato(contato);
+                if (ModelState.IsValid)
+                {
+                    _contatoRepositorio.AtualizarContato(contato);
+                    TempData["MensagemSucesso"] = "Alterações feitas com sucesso";
+                    return RedirectToAction("Index");
+                }
+
+                return View("Editar", contato);
+            }
+            catch (System.Exception error)
+            {
+                TempData["MensagemErro"] = $"Ocorreu um erro ao fazer alterações: {error.Message}";
                 return RedirectToAction("Index");
             }
-
-            return View("Editar", contato);
         }
 
         public IActionResult RemoverConfirmar(int ID)
@@ -53,19 +62,42 @@ namespace ControleDeCadastros.Controllers
         [HttpPost]
         public IActionResult Criar(ContatosModel NovoContato)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _contatoRepositorio.Adicionar(NovoContato);
+                if (ModelState.IsValid)
+                {
+                    _contatoRepositorio.Adicionar(NovoContato);
+                    TempData["MensagemSucesso"] = "Contato cadastrado com sucesso";
+
+                    return RedirectToAction("Index");
+                }
+
+                return View(NovoContato);
+
+            }
+            catch (System.Exception error)
+            {
+
+                TempData["MensagemErro"] = $"Algo deu errado, detalhes do problema{error.Message}";
                 return RedirectToAction("Index");
             }
-            return View(NovoContato);
+
         }
 
         // [HttpDelete]
         public IActionResult ApagarContato(int ID)
         {
-            _contatoRepositorio.ApagarContato(ID);
-            return RedirectToAction("Index");
+            try
+            {
+                _contatoRepositorio.ApagarContato(ID);
+                TempData["MensagemSucesso"] = "Contato removido com sucesso";
+                return RedirectToAction("Index");
+            }
+            catch (System.Exception error)
+            {
+                TempData["MensagemErro"] = $"Ocorreu um erro ao apagar o contato: {error.Message}";
+                return RedirectToAction("Index");
+            }
         }
     }
 }
